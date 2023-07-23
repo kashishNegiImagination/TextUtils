@@ -9,3 +9,8 @@ button{
     background-color: red;
     padding-left: 50px;
 }
+.success {background-color: #04AA6D;}
+.info {background-color: #2196F3;}
+.warning {background-color: #ff9800;}
+.danger {background-color: #ff3300;}
+

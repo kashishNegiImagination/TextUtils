@@ -20,7 +20,8 @@ export default function Alert(props) {
 
     // let parentElement=document.getElementsByClassName('alert');
   return (
-    props.alert &&
+    <div style={{height:'50px'}}>
+    {props.alert &&
     <>
  <div>
     <div className={`alert ${props.alert.type}`}>
@@ -29,7 +30,9 @@ export default function Alert(props) {
   </div>
     </div>
  
-</>  
+</> 
+    }
+</div> 
   )
 }
 

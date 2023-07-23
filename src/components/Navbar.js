@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Navbar.css";
 import PropTypes from 'prop-types'
-// import { a } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export default function Navbar(props) {
@@ -9,18 +9,21 @@ export default function Navbar(props) {
     <div>
       <div className={`topnav ${props.mode}`}>
       <div>
-      <a className="active" href="#">{props.title}</a>
-  <a href="#" >News</a>
-  <a href="#" >{props.name}</a>
-  <a href="#" >About</a>
+      <Link className="active" to="/">{props.title}</Link>
+  <Link to="/about" >News</Link>
+  <Link to="/about" >{props.name}</Link>
+  <Link to="/about" >About</Link>
 
       </div> 
       <div id="switching">
-      <button className="button-27" id="knegi">Button 27</button>
+      <button className="button-27 success" onClick={()=>{props.toggleMode('#04AA6D')}} id="knegi"></button>
+      <button className="button-27 info" onClick={()=>{props.toggleMode('#2196F3')}} id="knegi"></button>
+      <button className="button-27 warning" onClick={()=>{props.toggleMode('#ff9800')}} id="knegi"></button>
+      <button className="button-27 danger" onClick={()=>{props.toggleMode('#ff3300')}} id="knegi"></button>
 
       <label className="switch">
 
-  <input type="checkbox" onClick={props.toggleMode}/>
+  <input type="checkbox" onClick={()=>{props.toggleMode(null)}}/>
   <span className="slider round"></span>
 </label>
       </div>
